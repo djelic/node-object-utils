@@ -1,0 +1,32 @@
+{
+  "name": "node-object-utils",
+  "version": "0.0.1",
+  "description": "Object utils",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:djelic/node-object-utils.git"
+  },
+  "keywords": [
+    "object",
+    "utils",
+    "lookup",
+    "transform"
+  ],
+  "author": {
+    "name": "David Jelic",
+    "email": "djelic@buksna.net",
+    "url": "djelic.buksna.net"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/djelic/node-object-utils/issues"
+  },
+  "homepage": "https://github.com/djelic/node-object-utils",
+  "devDependencies": {
+    "mocha": "^2.0.1"
+  }
+}
