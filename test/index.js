@@ -78,6 +78,16 @@ describe('utils', function () {
       });
       assert.deepEqual(res.x, obj.a + ' ' + obj.b.b1);
     });
+
+    it('should be able to transform using function with context set to new object', function () {
+      var res = _.transform(obj, {
+        x: 'b.b1',
+        y: function () {
+          return this.x.toUpperCase();
+        }
+      });
+      assert.deepEqual(res.y, obj.b.b1.toUpperCase());
+    });
   });
 
 

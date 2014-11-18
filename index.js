@@ -21,7 +21,7 @@ function transform(src, schema) {
       case 'array':
         return val.map(_transform);
       case 'function':
-        return val(src);
+        return val.call(obj, src);
       default:
         return look(src, val);
     }
