@@ -32,6 +32,25 @@ function transform(src, schema) {
   return obj;
 }
 
+function without(src, props) {
+  if (!src || !props) return src;
+  switch (typeOf(props)) {
+    case 'string':
+      props = props.split(' ').map(function (prop) {
+        return prop.trim();
+      });
+      break;
+    case 'object':
+      props = Object.keys(props);
+      break;
+  }
+
+  return Object.keys(src).reduce(function (obj, key) {
+    if (!~props.indexOf(key)) obj[key] = src[key];
+    return obj;
+  }, {});
+}
+
 function typeOf(e) {
   return Object.prototype.toString.call(e)
     .match(/\s([a-zA-Z]+)/)[1]
@@ -40,4 +59,5 @@ function typeOf(e) {
 
 exports.look = look;
 exports.transform = transform;
+exports.without = without;
 exports.typeOf = typeOf;

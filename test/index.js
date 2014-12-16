@@ -91,6 +91,37 @@ describe('utils', function () {
   });
 
 
+  describe('without', function () {
+    it('should be able to return object without properties given as string', function () {
+      var res = _.without(obj, 'a b');
+      assert.deepEqual(res.a, undefined);
+      assert.deepEqual(res.b, undefined);
+      assert.deepEqual(res.c, obj.c);
+    });
+
+    it('should be able to return object without properties given as array', function () {
+      var res = _.without(obj, ['a', 'b']);
+      assert.deepEqual(res.a, undefined);
+      assert.deepEqual(res.b, undefined);
+      assert.deepEqual(res.c, obj.c);
+    });
+
+    it('should be able to return object without properties given as object', function () {
+      var res = _.without(obj, { a: 1, b: 1 });
+      assert.deepEqual(res.a, undefined);
+      assert.deepEqual(res.b, undefined);
+      assert.deepEqual(res.c, obj.c);
+    });
+
+    it('should be able to return object when called without props', function () {
+      var res = _.without(obj);
+      assert.deepEqual(res.a, obj.a);
+      assert.deepEqual(res.b, obj.b);
+      assert.deepEqual(res.c, obj.c);
+    });
+  });
+
+
   describe('typeOf', function () {
       var tests = {
         'undefined': undefined,

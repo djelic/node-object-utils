@@ -73,6 +73,35 @@ Outputs:
       num: 4
     }
 
+without(src, props)
+-------------------
+
+Return object without specific properties.
+
+Example:
+
+    var _ = require('node-object-utils')
+
+    var user = {
+      id: '123',
+      user: 'djelic',
+      password: 'hashed password'
+    }
+
+    user = _.without(user, 'password')
+    // or
+    user = _.without(user, ['password'])
+    // or
+    user = _.without(user, { password: 1 })
+
+    console.log(user)
+
+Outputs:
+
+    {
+      id: '123',
+      user: 'djelic'
+    }
 
 Installation
 ============
