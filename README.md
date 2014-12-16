@@ -14,6 +14,7 @@ Lookup hash properties by string.
 Example:
 
     var _ = require('node-object-utils')
+      , assert = require('assert')
 
     var obj = {
       foo: 'bar',
@@ -21,8 +22,8 @@ Example:
     }
 
     assert.deepEqual(_.look(obj, 'foo'), 'bar')
-    assert.deepEqual(_.look(obj, 'baz.0'), 'bug');
-    assert.deepEqual(_.look(obj, 'missing.prop'), undefined);
+    assert.deepEqual(_.look(obj, 'baz.0'), 'bug')
+    assert.deepEqual(_.look(obj, 'missing.prop'), undefined)
 
 transform(target, schema)
 -------------------------
@@ -43,7 +44,7 @@ Example:
         github: 'http://github.com/djelic'
       },
       number: 2
-    };
+    }
 
     var userSchema = {
       name: 'user.name',
@@ -62,12 +63,12 @@ Example:
 Outputs:
 
     {
-      name: "David",
+      name: 'David',
       info: {
-        username: "djelic",
+        username: 'djelic',
         urls: [
-          "http://github.com/djelic",
-          "http://twitter.com/djelich"
+          'http://github.com/djelic',
+          'http://twitter.com/djelich'
         ]
       },
       num: 4
