@@ -1,6 +1,6 @@
 {
   "name": "node-object-utils",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Object utils",
   "main": "index.js",
   "scripts": {
