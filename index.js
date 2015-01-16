@@ -57,7 +57,15 @@ function typeOf(e) {
     .toLowerCase();
 }
 
+function pluck(arr, prop) {
+  return (arr || []).reduce(function (memo, e) {
+    e[prop] && memo.push(e[prop]);
+    return memo;
+  }, []);
+}
+
 exports.look = look;
 exports.transform = transform;
 exports.without = without;
 exports.typeOf = typeOf;
+exports.pluck = pluck;

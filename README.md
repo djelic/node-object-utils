@@ -104,6 +104,25 @@ Outputs:
       user: 'djelic'
     }
 
+pluck(collection, prop)
+-----------------------
+
+Extract property from collection of objects.
+
+Example:
+
+    var _ = require(‘node-object-utils)
+
+    var col = [{ id: 1 }, { id: 2 }, { c: 3 }]
+
+    var ids = _.pluck(col, 'id')
+
+    console.log(ids)
+
+Outputs:
+
+  [1, 2]
+
 Installation
 ============
 

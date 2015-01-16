@@ -136,5 +136,12 @@ describe('utils', function () {
           assert.deepEqual(_.typeOf(tests[type]), type);
         });
       });
+
+
+  describe('pluck', function () {
+    var col = [{ id: 1 }, { id: 2 }, { c: 3 }];
+    it('should be able to pluck property from collection', function () {
+      assert.deepEqual(_.pluck(col, 'id'), [1, 2]);
+    });
   });
 });
