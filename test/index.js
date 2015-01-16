@@ -123,19 +123,20 @@ describe('utils', function () {
 
 
   describe('typeOf', function () {
-      var tests = {
-        'undefined': undefined,
-        'string': 'string',
-        'number': 12345,
-        'array': [],
-        'object': {},
-        'regexp': /^$/
-      };
-      Object.keys(tests).forEach(function (type) {
-        it('should be able to get type of '+type, function () {
-          assert.deepEqual(_.typeOf(tests[type]), type);
-        });
+    var tests = {
+      'undefined': undefined,
+      'string': 'string',
+      'number': 12345,
+      'array': [],
+      'object': {},
+      'regexp': /^$/
+    };
+    Object.keys(tests).forEach(function (type) {
+      it('should be able to get type of '+type, function () {
+        assert.deepEqual(_.typeOf(tests[type]), type);
       });
+    });
+  });
 
 
   describe('pluck', function () {
