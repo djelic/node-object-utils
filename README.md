@@ -130,7 +130,7 @@ Extract object values.
 
 Example:
 
-    var _ = require('node-object-utils)
+    var _ = require('node-object-utils')
 
     var obj = { a: 1, b: 2, c: 3 }
 
