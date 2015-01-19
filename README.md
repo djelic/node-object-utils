@@ -111,7 +111,7 @@ Extract property from collection of objects.
 
 Example:
 
-    var _ = require(‘node-object-utils)
+    var _ = require('node-object-utils')
 
     var col = [{ id: 1 }, { id: 2 }, { c: 3 }]
 
@@ -121,7 +121,26 @@ Example:
 
 Outputs:
 
-  [1, 2]
+    [1, 2]
+
+values(object)
+--------------
+
+Extract object values.
+
+Example:
+
+    var _ = require('node-object-utils)
+
+    var obj = { a: 1, b: 2, c: 3 }
+
+    var vals = _.values(obj)
+
+    console.log(vals)
+
+Outputs:
+
+    [1, 2, 3]
 
 Installation
 ============

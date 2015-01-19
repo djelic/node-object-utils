@@ -145,4 +145,11 @@ describe('utils', function () {
       assert.deepEqual(_.pluck(col, 'id'), [1, 2]);
     });
   });
+
+
+  describe('values', function () {
+    it('should be able to pull object values', function () {
+      assert.deepEqual(_.values({ a: 1, b: 2, c: 3 }), [1, 2, 3]);
+    });
+  });
 });

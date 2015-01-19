@@ -64,8 +64,15 @@ function pluck(arr, prop) {
   }, []);
 }
 
+function values(obj) {
+  return Object.keys(obj).map(function (key) {
+    return obj[key];
+  });
+}
+
 exports.look = look;
 exports.transform = transform;
 exports.without = without;
 exports.typeOf = typeOf;
 exports.pluck = pluck;
+exports.values = values;
